@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+    </head>
+
+    <body>
+        <h1>Bloggg 🪵</h1>
+        <P> Ranking the best bathrooms on campus</P>
+    
+
+        <form method="post">
+            <input type="text" name="item">
+            <input type="submit" value="add">
+        </form>
+
+        <ul>
+            {% for post in posts %}
+                <li>{{ post.data }} <a href="/remove/{{ post.id }}"> remove </a> </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+
+</html>
